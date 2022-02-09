@@ -1,0 +1,375 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+html{
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.wrap{
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.header{
+    width: 100%;
+    height: 300px;
+    background-color: #424242;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 117px;
+    height: 117px;
+    float: left;
+    margin-right: 75px;
+}
+
+.bmiForm{
+    display: flex;
+    flex-direction: column;
+    margin-right: 75px;
+    min-height: 185px;
+}
+
+.bmiForm label{
+    color: #FFD366;
+    font-family:AppleSystemUIFont;
+    font-size: 18px;
+}
+
+.bmiForm input{
+    width: 250px;
+    height: 40px;
+    background: rgba(255,255,255,0.18);
+    border:2px #FFD366 solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 24px;
+    color: white;
+    text-indent: 10px;
+    margin: 5px 0px 25px 0px;
+    font-family:SFNSDisplay;
+}
+
+.bmiForm input:last-of-type{
+    margin: 5px 0px 0px 0px;
+}
+
+.bmiForm input:focus{
+    border-color: #FFD366;
+    box-shadow: none;
+    outline: none;
+}
+
+::-webkit-input-placeholder{
+    color:rgba(255,255,255,0.50);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+
+.point{
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.send{
+    width: 120px;
+    height: 120px;
+    background-color: #FFD366;
+    border: none;
+    border-radius: 120px;
+    font-size: 24px;
+    color: #424242;
+    font-family:PingFangTC-Regular;
+}
+
+.send:hover{
+    background-color: #FFD366;
+    box-shadow: 0 1px 6px 3px rgb(255, 197, 51,0.64);
+}
+
+.send:active{
+    background-color: #DEA921;
+    box-shadow: none;
+}
+
+.bmiBtn-content{
+    width: 120px;
+    height: 120px;
+    background-color:#424242;
+    border: 6px solid;
+    border-radius: 123px;
+    position: relative;
+    box-sizing: border-box;
+    /* display: none; */
+}
+
+.bmiBtnBox{
+    text-align: center;
+}
+
+.bmiNum{
+    font-size: 32px;
+    font-family: SFNSDisplay;
+    padding-top: 35px;
+    /* position: absolute;
+    left: 18.5px;
+    top: 35px; */
+}
+
+.text{
+    font-size: 14px;
+    font-family: AppleSystemUIFont;
+    padding-top: 4px;
+    /* position: absolute;
+    left: 40.5px;
+    top: 71px; */
+}
+
+.btnStatus{
+    font-size: 32px;
+    line-height: 38px;
+    font-family: SFNSDisplay;
+    position: absolute;
+    right: -80px;
+    top: 35px;
+}
+
+.btnStatus2{
+    max-width: 128px;
+    font-size: 32px;
+    line-height: 38px;
+    font-family: SFNSDisplay;
+    position: absolute;
+    right: -147px;
+    top: 35px;
+}
+
+.circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
+    padding-top: 3px;
+    box-sizing: border-box;
+    border: 3px solid #424242;
+    animation-name: rotate;
+    animation-duration: 0.7s;
+}
+
+.circle:hover{
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.border{
+    border: 6px solid;
+}
+
+.borderleft{
+    width: 7px;
+    height: 62px;
+    border-left: thick solid;
+}
+
+.green{
+    color: #86D73E;
+}
+
+.blue{
+    color: #31BAF9;
+}
+
+.orange{
+    color: #FF982D;
+}
+
+.deepOrange{
+    color: #FF6C02;
+}
+
+.red{
+    color: #FF1200;
+}
+
+.bgGreen{
+    background-color:#86D73E;
+}
+
+.bgBlue{
+    background-color: #31BAF9;
+}
+
+.bgOrange{
+    background-color: #FF982D;
+}
+
+.bgdeepOrange{
+    background-color: #FF6C02;
+}
+
+.bgRed{
+    background-color: #FF1200;
+}
+
+.content{
+    min-height: 600px;
+    background-color: #F0F0F0;
+}
+
+.content h2{
+    font-size: 24px;
+    text-align: center;
+    font-family: SFNSDisplay;
+    color: #424242;
+    padding: 48px 0 36px 0;
+}
+
+.list{
+    width: 624px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-bottom: 74px;
+}
+
+.listItem{
+    width: 624px;
+    height: 62px;
+    margin-bottom: 16px;
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    box-shadow: 8px 8px 15px 1px #bfbfbf;
+}
+
+.listItem .bmiResult{
+    padding: 0 70px 0 19px;
+    font-size: 20px;
+    font-family: SFNSDisplay;
+}
+
+.listItem .bmiResult2{
+    padding: 0 30px 0 19px;
+    font-size: 20px;
+    font-family: SFNSDisplay;
+}
+
+.listItem span{
+    font-family: SFNSDisplay;
+    font-size: 20px;
+    color: #4A4A4A;
+    line-height: 23px;
+    padding: 0 42px 0 7px;
+}
+
+.listItem span:nth-of-type(3){
+    width: 58px;
+    padding: 0 30px 0 7px;
+}
+
+.listItem span:last-of-type{
+    padding-right: 52px;
+}
+
+.listItem p{
+    font-family: AppleSystemUIFont;
+    font-size: 12px;
+    color: #424242;
+    line-height: 15px;
+}
+
+.listItem p:last-of-type{
+    padding-right: 25px;
+}
+
+.listItem a{
+    text-decoration: none;
+    color: #707070;
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.listItem a:hover{
+    color: black;
+}
+
+.footer{
+    width: 1024px;
+    height: 90px;
+    background-color: #FFD366 ;
+}
+
+.footer img{
+    width: 55px;
+    height: 55px;
+    margin: 18px 484px 17px 485px;
+}
